@@ -2,6 +2,7 @@
 #define ATOM
 
 #include <vector>
+#include <limits>
 
 class Atom {
    public:

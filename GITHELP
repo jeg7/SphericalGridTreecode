@@ -1,0 +1,102 @@
+########################################################################
+# To make a new project in GitHub
+# If you are add this repository to your local mahine, skip to step [1]
+########################################################################
+[0] Make a new repository in GitHub (online)
+
+[1] Move repository to local machine using git clone
+
+    git clone git@github.com:[usename]/[repository name].git
+
+[2] Write or add code to repository directory
+
+[3] Track new or updated files
+
+    git add .
+
+[4] Commit updates to branch
+
+    git commit -m "Initial commit."
+
+[5] Push updates to GitHub
+
+    git push
+
+########################################################################
+# Create a new branch different from main
+########################################################################
+[0] Create a new branch with the contents of main
+
+    git checkout -b [branch name] main
+
+[1] Add branch to GitHub repository (online)
+
+    git push --set-upstream origin [branch name]
+
+########################################################################
+# Update current branch that is being worked on
+########################################################################
+[0] Make changes to files in repository
+
+[1] Track updates
+
+    git add .
+
+[2] Commit updates
+
+    git commit -m "[commit message]"
+
+[3] Push updates to GitHub
+
+    git push
+
+########################################################################
+# Merge branch into main
+########################################################################
+[0] Switch to main branch
+
+    git checkout main
+
+[1] Merge in branch
+
+    git merge [branch name]
+
+[2] Push merged main to GitHub
+
+    git push
+
+[3] Remove branch from GitHub
+
+    git push origin --delete [branch name]
+    git branch -d [branch name]
+
+########################################################################
+# General helpful things
+########################################################################
+# Add submodule
+git submodule add <remote_url> <destination_folder>
+
+# Update submodule
+git submodule update --init --recursive
+
+# Remove git submodule
+git submodule deinit <submodule>
+git rm <submodule>
+
+# Check update status of repository
+git status
+
+# Update local repo
+git pull
+
+# Remove excess/unused branches
+git remote prune origin
+
+# Force git pull to overwrite local files
+git fetch --all
+git checkout -b backup-main
+git reset --hard origin/main
+
+OR if on some other branch
+
+git reset --hard origin/<branch>

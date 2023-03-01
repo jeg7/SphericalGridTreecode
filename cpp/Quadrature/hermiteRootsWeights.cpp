@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <vector>
 #include <cmath>
+#include <algorithm>
 
 #include "hermiteRootsWeights.h"
 #include "sphericalBessel.h"
@@ -190,7 +191,7 @@ void GetRoot_and_WeightOfHermite(double &root, double &weight, std::size_t n, do
     for (std::size_t j = 0; j < 10; ++j) {
         GetHermitePolynomialValByRecursion(herm, derivHerm, n, x);
         double dx = herm / derivHerm;
-        if (isnan(dx)) dx = 0.0;
+        if (std::isnan(dx)) dx = 0.0;
         x = x - dx;
         if (abs(dx) < std::numeric_limits<double>::epsilon()) break;
     }

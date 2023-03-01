@@ -14,7 +14,7 @@ set (RUN_WATERBOX_SRC
     ./Cube/cube.cpp
     ./Cube/vecOfCubes.cpp
     ./Hierarchy/hierarchy.cpp
-    ./TestCode/run_waterBox.cpp
+    ./TestCode/run_waterbox.cpp
 )
 
 add_executable(run_waterbox ${RUN_WATERBOX_SRC})
